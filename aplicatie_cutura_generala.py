@@ -61,6 +61,24 @@ def draw_main_screen(mouse_pos):
                                            button_y + button_height // 2 - button_text_rendered.get_height() // 2))
 
 
+def draw_dropdown_menu(mouse_pos):
+    dropdown_widht, dropdown_height = 300, 60
+    dropdown_x = screen_width // 2 - dropdown_widht // 2
+    dropdown_y_start = screen_height // 2 + 100
+    options = ["Easy", "Medium", "Hard"]
+
+    for i, option in enumerate(options):
+        dropdown_y = dropdown_y_start + i * dropdown_height
+        if dropdown_x < mouse_pos[0] < dropdown_x + dropdown_widht and dropdown_y < mouse_pos[1] < dropdown_y + dropdown_height:
+            option_color = dark_grey
+        else:
+            option_color = grey
+
+        pygame.draw.rect(screen, option_color, (dropdown_x, dropdown_y, dropdown_widht, dropdown_height))
+        pygame.draw.rect(screen, black, (dropdown_x, dropdown_y, dropdown_widht, dropdown_height), 2)
+        option_text = font_button.render(option, True, black)
+        screen.blit(option_text, (dropdown_x + dropdown_widht // 2 - option_text.get_width() // 2, dropdown_y + dropdown_height // 2 - option_text.get_height() // 2))
+
 
 
 def main():
