@@ -1,6 +1,6 @@
 import pygame  # if you don't have pygame installed use the command pip install pygame
 import sys
-
+from general_quiz import general_quiz_app
 
 # Main window of the app
 pygame.init()
@@ -116,6 +116,7 @@ def main():
                 if button_x < mouse_pos[0] < button_x + button_width and general_quiz_button_y < mouse_pos[1] < general_quiz_button_y + button_height:
                     show_difficulty_menu = not show_difficulty_menu
                     print("Button 'General Quiz' was pressed")
+                    general_quiz_app()
 
                 
                 guess_the_flag_button_y = button_y_start
