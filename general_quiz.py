@@ -1,6 +1,6 @@
 import pygame
 import sys
-
+from new_general_quiz_game import run_new_game
 def general_quiz_app():
     pygame.init()
 
@@ -58,7 +58,7 @@ def general_quiz_app():
 
                 new_game_button_y = button_y_start
                 if button_x < mouse_pos[0] < button_x + button_width and new_game_button_y < mouse_pos[1] < new_game_button_y + button_height:
-                    print("New Game Button was pressed")
+                    run_new_game()
 
                 change_difficulty_button_y = button_y_start + button_height + button_gap
                 if button_x < mouse_pos[0] < button_x + button_width and change_difficulty_button_y < mouse_pos[1] < change_difficulty_button_y + button_height:
