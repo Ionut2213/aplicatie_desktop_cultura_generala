@@ -51,13 +51,13 @@ def general_quiz_app():
 
         button_widht, button_height = 300, 80
         button_x = screen_width // 2 - button_widht // 2
-        button_y_start = screen_height // 2
+        button_y_start = screen_height // 2 - 100
         button_gap = 20
 
-        buttons = ["New Game", "Change difficulty", "Back to main menu"]
+        buttons = ["New Game", "Change difficulty", "Main Menu"]
 
         for i, button_text in enumerate(buttons):
-            button_y = button_y_start + i + (button_height + button_gap)
+            button_y = button_y_start + i * (button_height + button_gap)
             if button_x < mouse_pos[0] < button_x + button_widht and button_y < mouse_pos[1] < button_y + button_height:
                 button_color = dark_grey
             else:
