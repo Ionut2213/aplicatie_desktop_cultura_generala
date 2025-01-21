@@ -22,8 +22,8 @@ red = (255, 0, 0)
 
 
 questions = [
-    {'question' : 'What is the highest waterfall in the world?',
-     'options': ["a) Niagara Falls", "b) Victoria Falls", "c) Angel Falls"], "correct" : "c"}
+    {"question" : "What is the highest waterfall in the world?",
+     "options": ["a) Niagara Falls", "b) Victoria Falls", "c) Angel Falls"], "correct": "c"}
     
    
 ]
